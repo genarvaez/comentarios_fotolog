@@ -2,18 +2,78 @@ body {
   background-color: white;
   color:black;
 }
-
-header {
+.logo img{
+  width: 10%;
+  margin-top: -10px
+ 
+}
+.logo{
+  box-sizing: border-box;
+  padding-top: 20px
+}
+.logo span{
+  font-family: 'Bowlby One', cursive;
+  font-size: 2.2em;
+  color: white;
+  text-decoration: underline;
+  padding-top: 20px
+}
+.navbar{
+  background: black;
+  border: none;
+}
+.icon i{
+  color: white;
   margin-top: 20px;
 }
-img {
+.icon i:hover{
+  color: DeepPink;
+}
+
+.input-group{
+  margin: 30px;
+}
+.recientes{
+  background-color: #F781BE;
+  border-right: 2px solid DeepPink;
+}
+
+.recientes a{
+  color: white;
+  font-size: 2em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bolder;
+  border-bottom: 5px solid DeepPink;
+  padding-right: 300px;
+}
+.content-photo{
+    background-color: #F8B1C1;
+}
+.content-photo h1{
+  border-left: 3px solid #CC2EFA;
+  padding: 10px;
+}
+#contenido{
+  margin-top: 90px;
+}
+.content-photo i{
+  color: #E6E6E6;
+  margin: 20px 30px 0 0;
+}
+.content-photo i:hover{
+  color: DeepPink;
+}
+
+
+.recientes img {
   width: 100%;
-  margin-bottom: 30px;
+  margin: 30px auto 15px;
+  border: 2px solid black;
+  border-radius: 5px
 }
 
 a {
-  text-decoration: underline;
-  color: green;
+  text-decoration:none
   margin-bottom: 30px;
 }
 
@@ -44,18 +104,16 @@ textarea, input{
 .posteo hr {
   border: 1px solid DeepPink;
 }
-/* PARA CORAZON */
-.corazon {
-  font-size: 40px;
-  color: gray;
-  text-align: center;
-}
-.rojo {
-  color: red;
-}
+
+  
 footer{
-  padding: 10px;
+  padding: 20px;
+  background: black;
+  border: none;
+  border-top: 2px solid DeepPink;
+
 }
+
 
 
 
@@ -63,13 +121,17 @@ footer{
 
 #data{
 
-  background-color: rgba(255, 0, 165, 0.4); 
+overflow: scroll;
   border: none;
-  margin: 20px 0;
   width: 100%;
+  height: 257px;
+
 } 
-#data p, #data h3{
+#data p, .data h3{
   color: white;
+  
+  background-color: rgba(68,82,82, 0.6);
+  margin-bottom: 0;
 }
 #data p{
   border-bottom: 5px solid white;
@@ -77,11 +139,71 @@ footer{
   font-family: 'Courgette', cursive;
 
 }
+#contenido{
+    background-color: #B0E7C6;
+}
 
 #data h3{
   text-align: left;
-  margin-left: 30px;
   font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bolder;
   
 }
+.hide{
+  display: none;
+}
+.alert-warning{
+  position: fixed;
+  top: 90px;
+  margin-left: -58px;
+}
 
+.photo img{
+  margin: 20px 60px;
+ 
+}
+.photo{
+  background: black;
+  margin-top: 20px;
+}
+.comments{
+  background: black;
+  margin-top: 20px;
+  
+}
+.cont-box{
+  margin-left: 50px;
+  padding: 20px;
+  background-color: #F8B1C1;
+
+}
+.formulario{
+  margin: 10px;
+  margin-left: -250px;
+}
+.formulario input, .formulario textarea{
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding-left: 20px;
+}
+.formulario textarea{
+  height: 100px;
+  width: 163%
+
+}
+.formulario button i{
+  margin: 0 10px;
+  color: white;
+}
+.formulario button{
+  border-radius: 5px;
+  background: violet;
+  border: none;
+  width: 20%;
+  margin-right: 80px;
+  -webkit-box-shadow: 22px 21px 56px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 22px 21px 56px 0px rgba(0,0,0,0.75);
+box-shadow: 22px 21px 56px 0px rgba(0,0,0,0.75);
+}

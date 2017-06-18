@@ -6,67 +6,86 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	 <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 logo">
-					<img src="img/fotolog-logo.png" alt="">
-				</div>
-			</div>
-		</div>
+		<nav class="navbar navbar-default navbar-fixed-top">
+ 			<div class="container">
+ 				<div class="row text-center">
+ 					<div class="col-md-12 alert alert-warning animated fadeIn hide" id="alert" role="alert">
+						<span>Comentarios ocultos, presiona <a href="#formulario" class="alert-link" onclick="save()">AQUÍ</a> para deshacer.</span>
+  					</div>
+					<div class="col-md-4 logo">
+ 						<img src="img/logosquare.jpg" alt="logo">
+ 						<span>FOTOLOG</span>
+ 					 </div>
+ 					 <div class="col-md-1 icon">
+ 						<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+ 						<a href=""><p>My profile</p></a>
+ 					</div>
+ 					<div class="col-md-1 icon">
+ 						<i class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+ 						<a href="#formulario"><p>Comments</p></a>
+ 					</div>
+ 					<div class="col-md-1 icon">
+ 						<i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+ 						<a href=""><p>Config</p></a>
+ 					</div>
+ 					<div class="col-md-5  input-group">
+ 						<span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+ 						<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+ 					</div>
+ 				</div>
+ 			</div>	
+		</nav>
 	</header>
-	<section id="bannerflog">
-		<div class="container">
-			<div class="col-md-12 text-center">
-				<h1>..::ÁrÉnItÁ .´´´ ÁmíGáS x CrÉw::..</h1>
-			</div>
-		</div>
-	</section>
 	<section id="contenido">
-		<div class="container">
-			<div class="col-md-2 recientes">
-				<a href="" class="fotos">Fotos Recientes</a>
-				<img src="img/jarcor.jpg">
-				<img src="img/foto_0920140822124434.jpg" alt="">
-				<img src="img/i-62869.jpeg" alt="">
-				<img src="img/p3.jpg" alt="">
-			</div>
-			<div class="col-md-8">
-				<img src="img/m1_768_11MS.jpg" alt="">
-				<p>AqUi EStAáá Mi AmIgA ArEnItAáÁÁ</p>
-			</div>
-			<div class="col-md-2 recientes">
-				<a href="" class="fotos">Fotos Recientes</a>
-				<img src="img/jarcor.jpg">
-				<img src="img/foto_0920140822124434.jpg" alt="">
-				<img src="img/i-62869.jpeg" alt="">
-				<img src="img/p3.jpg" alt="">
-			</div>
-		</div>
-	</section>
-	<section class="formulario">
-		<div class="container" id="caja">
-			<div class="row">
-				<div class="col-md-offset-3 col-md-6">
-					<form Name="formulario">
-						<h3>Nombre</h3>
-						<input type="text" id="clave">
-						<h3>Comentario</h3>
-						<textarea id="valor"></textarea>
-						<button type="button" id="save" class=" btn btn-default" value="Guardar Datos">Guardar</button>
-						<button type="button" id="clean" class=" btn btn-default" value="Guardar Datos">Limpiar Comentarios</button>
-					</form>
+		<div class="container" >
+			<div class="row cont-box">
+				<div class="col-md-4 recientes">
+					<a href="" class="fotos">Friends</a>
+					<img src="img/jarcor.jpg">
+					<img src="img/foto_0920140822124434.jpg" alt="">
+					<img src="img/i-62869.jpeg" alt="">
+					<img src="img/p3.jpg" alt="">
+				</div>
+				<div class="col-md-8 content-photo">
+					<h1>Comentarios</h1>
+					<i class="fa fa-trash fa-2x" data-toggle="tooltip" data-placement="top" title="Delete" aria-hidden="true"></i>
+					<i class="fa fa-pencil fa-2x" data-toggle="tooltip" data-placement="top" title="Edit" aria-hidden="true"></i>
+					<i class="fa fa-share-alt fa-2x" data-toggle="tooltip" data-placement="top" title="Share" aria-hidden="true"></i>
+					<div class="row">
+						<div class="col-md-6 photo">
+							<img src="img/m1_768_11MS.jpg" class="img-responsive" alt="">
+						</div>
+						<div class="col-md-6 comments text-center">
+							<div class="col-md-12 data" id="data"></div>
+							
+						</div>
+					</div>
+					<div class="row formulario">
+						<div class="col-md-offset-3 col-md-6">
+							<form Name="formulario">
+								<input type="text" id="clave" placeholder="Type your username">
+								<textarea id="valor" placeholder="Type your comment"></textarea>
+							</form>
+						</div>
+						<div class="col-md-offset-3 col-md-12">
+							<button type="button" id="save" class=" btn btn-default" value="Guardar Datos">Enviar <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+							</button>
+							<button type="button" id="hide" class=" btn btn-default" valueoculatr">Ocultar Comentarios <i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+							<button type="button" id="clean" class=" btn btn-default" value="limpiar">Eliminar Comentarios <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="row text-center">
-				<div class="col-md-12" id="data"></div>
-			</div>
 		</div>
 	</section>
+	
 	<section class="container">
 		<div class="row">
 			<div class="col-md-offset-3 col-md-6">
@@ -81,6 +100,6 @@
 			</div>
 		</div>
 	</footer>
-	<script src="js/main.js"></script>
+	<script src="js/main2.js"></script>
 </body>
 </html>
